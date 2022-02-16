@@ -26,7 +26,7 @@ a {
 
 .hero {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 50px;
     gap: 50px;
@@ -106,7 +106,7 @@ a {
 
 .cta {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 50px 150px;
     padding: 25px 50px;
