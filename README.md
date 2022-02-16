@@ -1,1 +1,2 @@
 # business-page
+This page is intended to showcase new CSS skills learned through The Odin Project's front-end development course. I will display a basic knowledge of beginner CSS skills, including flexbox.
