@@ -11,6 +11,10 @@ body {
     background-color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -132,8 +136,9 @@ header {
 
 .front-text {
     text-align: left;
-    height: 15vh;
+    height: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding: 10px;
@@ -158,26 +163,6 @@ header {
 
 #recipes-front, #rps-front, #eas-front, #calc-front {
     font-size: 25px;
-}
-
-#recipes-back {
-    background-image: url('../img/recipes-realms.png');
-}
-
-#rps-back {
-    background-image: url('../img/rps.png');
-}
-
-#eas-back {
-    background-image: url('../img/eas.png');
-}
-
-#calc-back {
-    background-image: url('../img/calculator.png');
-}
-
-.back-text {
-    display: none;
 }
 
 .work-links {
