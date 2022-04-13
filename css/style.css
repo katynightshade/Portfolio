@@ -127,17 +127,19 @@ header {
 }
 
 .work-display {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     margin-bottom: 40px;
-    background-color: rgb(2, 39, 20);
-    perspective: 1000px;
+    background-image: url(../img/plant.png);
+    max-height: fit-content;
 }
 
 .work {
     display: flex;
     flex-direction: column;
+}
+
+.work-list {
+    list-style-image: url('../img/point-right.png');
+    z-index: 1;
 }
 
 .front-text {
@@ -151,20 +153,8 @@ header {
     color: aliceblue;
 }
 
-#recipes-front {
-    background-color: rgb(27, 54, 42);
-}
-
-#rps-front {
-    background-color: rgb(2, 39, 20);
-}
-
-#eas-front {
-    background-color: rgb(2, 39, 20);
-}
-
-#calc-front {
-    background-color: rgb(27, 54, 42);
+.drop-text {
+    display: none;
 }
 
 #recipes-front, #rps-front, #eas-front, #calc-front {
