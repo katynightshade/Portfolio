@@ -278,3 +278,45 @@ footer {
     font-size: 15px;
     font-weight: 700;
 }
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-title {
+    margin: 10px;
+}
+
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px;
+}
+
+.contact-img {
+    height: 10vh;
+}
+
+.email, .phone, .link, .github {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-text {
+    font-size: 17px;
+}
+
+.page-links {
+    text-decoration: none;
+    color: rgb(2, 39, 20);
+}
+
+.contact-page > footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
