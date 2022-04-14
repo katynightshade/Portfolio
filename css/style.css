@@ -340,3 +340,24 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+@media only screen and (min-width: 600px) {
+    header {
+        font-size: 20px;
+    }
+    #hero-list {
+        font-size: 17px;
+    }
+    .hero-img {
+        max-width: 75vw;
+    }
+    .work-display {
+        width: 70vw;
+    }
+    .front-text {
+        margin-left: 15px;
+    }
+    .footer-text {
+        font-size: 20px;
+    }
+}
