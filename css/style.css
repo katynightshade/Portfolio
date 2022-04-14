@@ -132,14 +132,30 @@ header {
     max-height: fit-content;
 }
 
+.work-list {
+    list-style: none;
+}
+
 .work {
     display: flex;
     flex-direction: column;
 }
 
-.work-list {
-    list-style-image: url('../img/point-right.png');
-    z-index: 1;
+.work::before {
+    content: '';
+    border-color: transparent rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: flex;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 2.2em;
+    position: relative;
+    -webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
 }
 
 .front-text {
@@ -154,11 +170,32 @@ header {
 }
 
 .drop-text {
-    display: none;
+    height: 0px;
+    opacity: 0;
+    transition: height 1s, width 1s ease-in-out;
+    -webkit-transition:height 1s, width 1s ease-in-out;
+	-moz-transition:height 1s, width 1s ease-in-out;
+	-o-transition:height 1s, width 1s ease-in-out;
+}
+
+.work:hover .drop-text {
+    height: fit-content;
+    opacity: 1;
+}
+
+.work:hover::before {
+    -webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	transform:rotate(90deg);
 }
 
 #recipes-front, #rps-front, #eas-front, #calc-front {
     font-size: 25px;
+}
+
+.recipe-title, .rps-title, .eas-title, .calc-title {
+    margin: 5px;
 }
 
 .work-links {
@@ -166,23 +203,16 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
+    font-size: 20px;
+    font-weight: 700;
     text-align: center;
 }
 
 .link-title {
     margin: 5px;
     text-align: center;
-    color: white;
-}
-
-.site-link {
-    background-color: rgb(52, 77, 65);
-    padding: 15px;
-    margin: 5px;
-    text-align: center;
-    text-decoration: none;
     color: white;
 }
 
