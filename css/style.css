@@ -181,6 +181,7 @@ header {
     align-items: flex-start;
     padding: 10px;
     color: aliceblue;
+    font-size: 25px;
 }
 
 .drop-text {
@@ -204,11 +205,7 @@ header {
 	transform:rotate(90deg);
 }
 
-#recipes-front, #rps-front, #eas-front, #calc-front {
-    font-size: 25px;
-}
-
-.recipe-title, .rps-title, .eas-title, .calc-title {
+.title {
     margin: 5px;
 }
 
