@@ -1,4 +1,4 @@
-const worksDiv = document.querySelector('.title-display');
+const worksDiv = document.querySelector('.works');
 
 const workArray = [
     {
