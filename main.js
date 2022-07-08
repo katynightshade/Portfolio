@@ -56,6 +56,8 @@ const workArray = [
 ];
 
 (function createDivs() {
+    const flipDiv = document.createElement('div');
+    flipDiv.classList.add('flip-div');
     for (let i = 0; i < workArray.length; i++) {
         const workTitle = document.createElement('p');
         workTitle.classList.add('front-text');
@@ -76,6 +78,7 @@ const workArray = [
 
         backText.append(workPre, linkGH);
 
-        worksDiv.append(workTitle, backText);
+        flipDiv.append(workTitle, backText);
     }
+    worksDiv.appendChild(flipDiv);
 })();
