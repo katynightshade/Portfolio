@@ -359,28 +359,60 @@ footer {
 
 @media only screen and (min-width: 1024px) {
     header {
-        margin: 1em;
+        padding: 20px 30px;
     }
-    .nav-links {
-        font-size: 1.3em;
+    .left-head {
+        max-width: 7vw;
     }
     .hero {
-        margin-bottom: 0;
-        justify-content: space-between;
-    }
-    .hero-list > li {
-        font-size: 23px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
     }
     .hero-img {
-        width: 35vw;
+        grid-area: 1 / 1 / 4 / 2;
+        max-width: 40vw;
+        max-height: 70vh;
+        margin-left: 3vw;
+        top: 0;
+    }
+    .hero > h1 {
+        grid-area: 1 / 2 / 2 / 3 ;
+        left: -8vw;
+        margin-top:  7vh;
+        padding-left: 0;
+    }
+    .hero-list {
+        grid-area: 2 / 2 / 3 / 3;
+        padding-left: 20px;
+    }
+    .hero > p {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .about > h2, .work-title, .front-text {
+        font-size: 1.5em;
+    }
+    .pro, .hobby > p, .skills > p, .footer-text, .contact-links, .attr {
+        font-size: 1em;
+    }
+    .hobby >h4, .skills > h4, .page-links {
+        font-size: 1.3em;
+    }
+    .hobby > h4, .skills > h4 {
+        margin-bottom: 15px;
+    }
+    .works {
+        grid-template-columns: repeat(3, 1fr);
     }
     .work-title {
-        font-size: 30px;
+        grid-area: 1 / 1 / 2 / 4;
     }
-    .contact-links {
-        gap: 4em;
+    .drop-text {
+        
     }
-    .contact-page > footer {
-        position: relative;
+    .work-links, .contact-title {
+        font-size: 1.2em;
+    }
+    .contact-img {
+        height: 10vh;
     }
 }
