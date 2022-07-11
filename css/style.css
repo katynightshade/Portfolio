@@ -331,43 +331,29 @@ footer {
 
 @media only screen and (min-width: 768px) {
     .hero {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 3em;
+        grid-template-rows: 1fr 550px 1fr 1fr;
+    }
+    .hero > h1 {
+        top: 1vh;
+        font-size: 2.5em;
     }
     .hero-img {
-        max-width: 45vw;
+        top: -1vh;
     }
-    .footer-img {
-        max-width: 10vw;
+    .about > h2, .work-title, .front-text {
+        font-size: 28px;
     }
-    .title-main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
+    .pro, .hobby > p, .skills > p, .footer-text, .contact-links, .attr {
+        font-size: 22px;
     }
-    .contact-title {
-        background-image: url(../img/plant.png);
-        color: white;
-        font-size: 30px;
-        text-align: center;
-        width: 60vw;
+    .hobby >h4, .skills > h4, .page-links {
+        font-size: 24px;
     }
-    .contact-main {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 35px;
+    .work-links, .contact-title {
+        font-size: 26px;
     }
-    .email, .link, .github {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-    .page-links {
-        font-size: 25px;
-        font-weight: 700;
+    .contact-img {
+        height: 10vh;
     }
 }
 
