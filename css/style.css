@@ -150,7 +150,7 @@ header {
     grid-template-rows: 1fr 1fr;
     gap: 5%;
     padding: 5%;
-    height: 15vh;
+    height: fit-content;
     max-width: 100%;
     background-color: beige;
     border-radius: 10%;
