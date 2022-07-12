@@ -57,15 +57,19 @@ const workArray = [
 
 (function createDivs() {
     for (let i = 0; i < workArray.length; i++) {
-        const flipDiv = document.createElement('div');
-        flipDiv.classList.add('flip-div');        
+        const flipCard = document.createElement('div');
+        flipCard.classList.add('flip-card');
+        
+        const frontDiv = document.createElement('div');
+        frontDiv.classList.add('front-div');
 
         const workTitle = document.createElement('p');
         workTitle.classList.add('front-text');
         workTitle.textContent = workArray[i].title;
+        frontDiv.appendChild(workTitle);
 
-        const backText = document.createElement('div');
-        backText.classList.add('drop-text');
+        const backDiv = document.createElement('div');
+        backDiv.classList.add('back-text');
 
         const workPre = document.createElement('a');
         workPre.classList.add('work-links');
@@ -77,10 +81,10 @@ const workArray = [
         linkGH.href = workArray[i].ghLink;
         linkGH.textContent = 'View Code on GitHub';
 
-        backText.append(workPre, linkGH);
+        backDiv.append(workPre, linkGH);
 
-        flipDiv.append(workTitle, backText);
+        flipCard.append(frontDiv, backDiv);
 
-        worksDiv.appendChild(flipDiv);
+        worksDiv.appendChild(flipCard);
     } 
 })();

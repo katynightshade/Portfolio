@@ -145,49 +145,48 @@ header {
     text-align: center;
 }
 
-.flip-div {
-    perspective: 1000px;
-    position: relative;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+.flip-card {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 5%;
+    padding: 5%;
+    height: 15vh;
+    max-width: 100%;
     background-color: beige;
     border-radius: 10%;
 }
 
-.front-text {
-    margin: 0;
-    text-align: center;
+.front-div {
+    grid-row: 1 / 2;
     display: flex;
     align-items: center;
-    height: 10vh;
-    padding: 20px;
-    font-size: 25px;
+    justify-content: center;
 }
 
-.flip-div:hover, .drop-text {
-    transform: rotateY(180deg);
+.front-text {
+    margin: 0;
+    font-size: 22px;
+    text-align: center;
 }
 
-.front-text, .drop-text {
-    backface-visibility: hidden;
-}
-
-.drop-text {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    padding: 10px;
+.back-text {
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
 }
 
 .work-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-decoration: underline;
-    color: black;
-    font-size: 20px;
-    text-align: center;
+    color: rgb(37, 37, 37);
+    font-size: 15px;
+    display: list-item;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.work-links:visited {
+    color: blueviolet;
 }
 
 footer {
@@ -314,12 +313,16 @@ footer {
     .hobby >h4, .skills > h4 {
         font-size: 23px;
     }
+    .flip-card {
+        height: fit-content;
+    }
     .front-text {
         justify-content: center;
     }
-    .drop-text {
+    .back-text {
+        height: 70%;
+        width: 80%;
         padding: 7% 10%;
-        right: 0;
     }
     .work-links {
         font-size: 23px;
@@ -340,7 +343,7 @@ footer {
     .hero-img {
         top: -1vh;
     }
-    .about > h2, .work-title, .front-text {
+    .about > h2, .work-title {
         font-size: 28px;
     }
     .pro, .hobby > p, .skills > p, .footer-text, .contact-links, .attr {
@@ -349,8 +352,14 @@ footer {
     .hobby >h4, .skills > h4, .page-links {
         font-size: 24px;
     }
+    .front-text {
+        font-size: 32px;
+    }
     .work-links, .contact-title {
         font-size: 26px;
+    }
+    .flip-card {
+        border-radius: 5%;
     }
     .contact-img {
         height: 10vh;
@@ -388,7 +397,7 @@ footer {
     .hero > p {
         grid-area: 3 / 2 / 4 / 3;
     }
-    .about > h2, .work-title, .front-text {
+    .about > h2, .work-title {
         font-size: 1.5em;
     }
     .pro, .hobby > p, .skills > p, .footer-text, .contact-links, .attr {
@@ -396,6 +405,9 @@ footer {
     }
     .hobby >h4, .skills > h4, .page-links {
         font-size: 1.3em;
+    }
+    .front-text {
+        font-size: 1.7em;
     }
     .hobby > h4, .skills > h4 {
         margin-bottom: 15px;
@@ -406,13 +418,22 @@ footer {
     .work-title {
         grid-area: 1 / 1 / 2 / 4;
     }
-    .drop-text {
-        
+    .back-text {
+        padding: 10%;
     }
     .work-links, .contact-title {
         font-size: 1.2em;
     }
     .contact-img {
         height: 10vh;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .left-head {
+        width: 5vw;
+    }
+    .hero {
+        min-height: 70vh;
     }
 }
